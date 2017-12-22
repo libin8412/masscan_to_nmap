@@ -1,11 +1,9 @@
 # encoding: utf-8
 import json
 import sys
-from time import sleep
 from libnmap.process import NmapProcess
 from libnmap.reportjson import ReportDecoder,ReportEncoder
 from libnmap.parser import NmapParser,NmapParserException
-import MySQLdb
 import time
 import multiprocessing
 import os
