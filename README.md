@@ -13,8 +13,14 @@
 
 【用法】
 
+1、安装python库
+pip install python-libnmap
 
-1、在该python文件的同文件夹下，创建一个scan_ip.txt，可以是IP或ip段，一行行分割
+pip install chardet
+
+pip install requests
+
+2、在该python文件的同文件夹下，创建文件scan_ip.txt，可以是IP或ip段，一行行分割
 
 如
 
@@ -22,10 +28,18 @@
 
 10.2.1.11
 
-2、执行
+3、执行
 
 python nmap_port_scan_withmasscan.py
 
 可以看到输出的结果
+
+
+4、注意要点
+
+masscan扫描比较消耗带宽，扫描准确性与速度是有矛盾的，一般建议扫描速度参数 --rate 的范围为20000-100000
+
+可以自行调整 数字越高扫描越快，但丢包和准确性就降低了，我这里为50000
+
 
 
