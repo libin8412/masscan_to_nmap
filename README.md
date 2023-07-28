@@ -20,6 +20,12 @@ pip install chardet
 
 pip install requests
 
+2、安装masscan
+
+github上下载masscan 编译安装
+
+修改代码中的masscan的路径，在第17行
+
 2、在该python文件的同文件夹下，创建文件scan_ip.txt，可以是IP或ip段，一行行分割
 
 如
