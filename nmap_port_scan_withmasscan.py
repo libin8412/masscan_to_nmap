@@ -15,7 +15,6 @@ global_port_states =['open']
 if os.path.exists('test_json4.json'):
     os.remove('test_json4.json')
 os.system('/Users/larry/Program/masscan/bin/masscan -iL scan_ip.txt -p1-65535 -oJ test_json4.json --rate 10000')
-# os.system('masscan -iL scan_ip4.txt -pU:1-65535 -oJ test_json4_udp.json --rate 10000') udp扫描
 
 # 定义函数，用于进行扫描
 def do_nmap_scan(scan_ip_list, scan_port):
