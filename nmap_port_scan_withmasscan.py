@@ -67,10 +67,9 @@ if __name__ == "__main__":
     # 引入多进程
     pool = multiprocessing.Pool(8)
     with open('test_json4.json', 'r') as file:
-        # masscan有一个坑，也就是输出的json格式有问题，需要去掉最后有问题的“,”号，否则json不解析
         str1 = file.read()
-        str2 = str1[:-4] + str1[-3:]
-        data = json.loads(str2)
+        #str2 = str1[:-4] + str1[-3:]
+        data = json.loads(str1)
         for i in range(len(data)):
             scan_ip_list = data[i]['ip']
             scan_port = data[i]['ports'][0]['port']
